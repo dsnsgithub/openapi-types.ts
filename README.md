@@ -55,7 +55,6 @@ const res = await octokit.rest.activity.listPublicEventsForUser({
 	headers: { "X-GitHub-Api-Version": "2022-11-28" }
 })
 
-const typedEvents = []
 for (const event of res.data) {
 	if (isEvent(event, "PullRequestEvent")) {
 		// event is now PullRequestEvent and is typeguarded.
