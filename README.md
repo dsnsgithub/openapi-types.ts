@@ -39,9 +39,9 @@ export type EventPayloadMap = {
 };
 
 function isEvent<T extends keyof EventPayloadMap>(
-  event: any,
+  event: components["schemas"]["event"],
   type: T
-): event is { type: T; payload: EventPayloadMap[T] } {
+): event is components["schemas"]["event"] & { type: T; payload: EventPayloadMap[T] } {
   return event.type === type;
 }
 ```
