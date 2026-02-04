@@ -16,7 +16,6 @@ Add to `package.json`:
 },
 ```
 
-### Optional 
 Use this hack to typeguard:
 ```ts
 import type { components } from "@octokit/openapi-types";
