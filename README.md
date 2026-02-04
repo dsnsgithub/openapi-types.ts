@@ -9,12 +9,13 @@
 
 ## Usage
 
-Add to `package.json`:
+Add to `package.json`[^1]:
 ```json
 "overrides": {
     "@octokit/openapi-types": "github:dsnsgithub/openapi-types.ts#main"
 },
 ```
+[^1]: You may have to delete `node_modules`/`package-lock.json` and reset Vercel build cache for the override to take effect.
 
 Use this hack to typeguard:
 ```ts
