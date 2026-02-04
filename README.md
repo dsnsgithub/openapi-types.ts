@@ -19,6 +19,8 @@ Add to `package.json`:
 ### Optional 
 Use this hack to typeguard:
 ```ts
+import type { components } from "@octokit/openapi-types";
+
 export type EventPayloadMap = {
   CreateEvent: components["schemas"]["create-event"];
   DeleteEvent: components["schemas"]["delete-event"];
@@ -46,9 +48,14 @@ function isEvent<T extends keyof EventPayloadMap>(
 }
 ```
 
-Usage:
+Example Usage:
 
 ```ts
+import { Octokit } from "@octokit/rest";
+import type { components } from "@octokit/openapi-types";
+
+...
+
 const res = await octokit.rest.activity.listPublicEventsForUser({
 	username: "dsnsgithub",
 	per_page: 30,
