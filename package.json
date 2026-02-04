@@ -1,78 +1,21 @@
 {
   "name": "@octokit/openapi-types",
-  "private": true,
+  "description": "Generated TypeScript definitions based on GitHub's OpenAPI spec for api.github.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octokit/openapi-types.ts.git",
+    "directory": "packages/openapi-types"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "version": "0.0.0-development",
-  "description": "Generated TypeScript definitions based on GitHub's OpenAPI spec for https://api.github.com",
-  "repository": "github:octokit/openapi-types.ts",
+  "main": "",
+  "types": "types.d.ts",
   "author": "Gregor Martynus (https://twitter.com/gr2m)",
   "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "download": "node scripts/download.js",
-    "generate-types": "node scripts/generate-types.js",
-    "update-package": "node scripts/update-package.js",
-    "lint": "prettier --check '*.{md,json}' 'scripts/*.js' 'packages/**/*.{ts,md,json,d.ts}'",
-    "lint:fix": "prettier --write '*.{md,json}' 'scripts/*.js' 'packages/**/*.{ts,md,json,d.ts}'"
-  },
-  "devDependencies": {
-    "@octokit/core": "^7.0.0",
-    "@octokit/plugin-paginate-rest": "^13.0.0",
-    "github-enterprise-server-versions": "^3.0.0",
-    "openapi-typescript": "^6.2.1",
-    "prettier": "3.7.4"
-  },
-  "prettier": {},
-  "release": {
-    "branches": [
-      "main",
-      "beta"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/github",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "packages/openapi-types"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "packages/openapi-types-ghec"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "packages/openapi-types-ghes-3.14"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "packages/openapi-types-ghes-3.15"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "packages/openapi-types-ghes-3.16"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "packages/openapi-types-ghes-3.17"
-        }
-      ],
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "packages/openapi-types-ghes-3.18"
-        }
-      ]
-    ]
+  "octokit": {
+    "openapi-version": "22.0.0"
   }
 }
