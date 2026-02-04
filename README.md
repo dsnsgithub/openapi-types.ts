@@ -1,10 +1,20 @@
 # @octokit/openapi-types
 
-> Generated TypeScript definitions based on GitHub's OpenAPI spec
+> [!NOTE]
+> `@octokit/openapi-types` is currently outdated because Octokit lacks maintainers for the official Octokit JS repositories.
+> This is my attempt at creating a working package.
+>
+> Issue: https://github.com/dsnsgithub/dsns.dev/issues/6
 
-This package is continuously updated based on [GitHub's OpenAPI specification](https://github.com/github/rest-api-description/)
 
 ## Usage
+
+Add to `package.json`:
+```json
+"overrides": {
+    "@octokit/openapi-types": "github:dsnsgithub/openapi-types.ts#main"
+},
+```
 
 ```ts
 import { components } from "@octokit/openapi-types";
